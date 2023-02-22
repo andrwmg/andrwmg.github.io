@@ -1,3 +1,17 @@
 body a {
     text-decoration: none;
 }
+
+*::-webkit-scrollbar{
+    display: none;
+    max-width: 100vw;
+  }
+  
+.Main-Cards {
+    box-sizing: border-box;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    max-width: 100vw;
+    background-image: linear-gradient(180deg, #f3f3f3, white);
+}

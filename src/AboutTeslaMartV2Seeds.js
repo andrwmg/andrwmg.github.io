@@ -1,10 +1,10 @@
 import { blue, deepPurple, orange, red, teal, yellow } from "material-ui-colors"
-import profile from './ProfileTransparent.png'
-import messages from './MessagesTransparent.png'
-import listings from './ListingsTransparent.png'
-import details from './DetailsTransparent.png'
-import newForm from './NewTransparent.png'
-import edit from './EditTransparent.png'
+import profile from './ProfileTrimmed.png'
+import messages from './MessagesTrimmed.png'
+import listings from './ListingsTrimmed.png'
+import details from './DetailsTrimmed.png'
+import newForm from './NewTrimmed.png'
+import edit from './EditTrimmed.png'
 
 const teslaMartV2 = [{
     // imageUrl: 'https://res.cloudinary.com/deuft4auk/image/upload/v1671405453/Personal%20Website/cray_arrange_s8krcq.png',

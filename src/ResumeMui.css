@@ -1,0 +1,7 @@
+.Main-Cards {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    column-gap: 20px;
+    width: 100%;
+}

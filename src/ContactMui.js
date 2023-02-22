@@ -3,53 +3,29 @@ import { Grid, List, ListItemButton, ListItemIcon, ListItemText, Typography } fr
 import { blue } from 'material-ui-colors'
 import React from 'react'
 
+const items = [
+    {text: 'andrwmg@gmail.com', icon: <MailOutline />, link: 'mailto: andrwmg@gmail.com'},
+    {text: '610-888-4468', icon: <PhoneOutlined />, link: 'tel:6108884468'},
+    {text: 'andrewmichaelgay.com', icon: <WebOutlined />, link: 'https://www.andrewmichaelgay.com'},
+    {text: 'linkedin.com/in/andrwmg', icon: <LinkedIn />, link: 'https://www.linkedin.com/in/andrwmg'},
+    {text: 'github.com/andrwmg', icon: <GitHub />, link: 'https://github.com/andrwmg'}]
+
 export default function Contact() {
     return (
         <>
             <Typography sx={{ fontSize: '1.75rem', fontWeight: '600', mb:3 }} color={blue[600]}>Contact</Typography>
             <Grid container item direction='column' alignItems='flex-start' rowGap={2}>
                 <List disablePadding sx={{ height: '100%', width: '100%' }}>
-                    <ListItemButton href='mailto: andrwmg@gmail.com' sx={{ width: '100%'  }}>
-                        <ListItemIcon>
-                            <MailOutline sx={{ color: blue[600] }} />
+                    {items.map(i => (
+                        <ListItemButton href={i.link} sx={{ width: '100%'  }}>
+                        <ListItemIcon sx={{ color: blue[600] }}>
+                            {i.icon}
                         </ListItemIcon>
                         <ListItemText>
-                            andrwmg@gmail.com
+                            {i.text}
                         </ListItemText>
                     </ListItemButton>
-                    <ListItemButton href='tel:6108884468' sx={{ width: '100%' }}>
-                        <ListItemIcon>
-                            <PhoneOutlined sx={{ color: blue[600] }} />
-                        </ListItemIcon>
-                        <ListItemText>
-                            610-888-4468
-                        </ListItemText>
-                    </ListItemButton>
-                    <ListItemButton href='https://www.andrewmichaelgay.com' sx={{ width: '100%' }}>
-                        <ListItemIcon>
-                            <WebOutlined sx={{ color: blue[600] }} />
-                        </ListItemIcon>
-                        <ListItemText>
-                            andrewmichaelgay.com
-                        </ListItemText>
-                    </ListItemButton>
-                    <ListItemButton href='https://www.linkedin.com/in/andrwmg' sx={{ width: '100%' }}>
-                        <ListItemIcon>
-                            <LinkedIn sx={{ color: blue[600] }} />
-                        </ListItemIcon>
-                        <ListItemText>
-                            linkedin.com/in/andrwmg
-                        </ListItemText>
-                    </ListItemButton>
-                    <ListItemButton href='https://github.com/andrwmg' sx={{ width: '100%' }}>
-                        <ListItemIcon>
-                            <GitHub sx={{ color: blue[600] }} />
-                        </ListItemIcon>
-                        <ListItemText>
-                            github.com/andrwmg
-                        </ListItemText>
-                    </ListItemButton>
-
+                    ))}
                 </List>
             </Grid>
         </>

@@ -1,0 +1,166 @@
+.Card {
+    display: flex;
+    flex-direction: column;
+    box-sizing:content-box;
+    position: relative;
+    color: white;
+    min-height: 400px;
+    width: 300px;
+    min-width: 300px;
+    align-items: center;
+    border: none;
+    border-radius: 12px;
+    text-align: left;
+    background-image: linear-gradient(0deg, rgba(30, 136, 229,.75), rgba(30, 136, 229,.15));
+}
+
+.Card-wide {
+    min-width: 600px;
+}
+
+.Card ul {
+    margin: 0;
+    padding-inline-start: 12px;
+}
+
+.Card-Overlay {
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 12px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.8);
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    z-index: 1;
+}
+
+.Card-Image {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 300px;
+    justify-content: center;
+    row-gap: 40px;
+}
+
+.Card-Image img {
+    object-fit: contain ;
+    width: 100%;
+    max-height: 80%;
+}
+
+.Card-text {
+    position: absolute;
+    bottom: 60px;
+    left: 10%;
+    transition: all .3s ease-in-out;
+    max-width: 80%;
+    z-index: 2;
+}
+
+.Card-company {
+    font-size: 16px;
+    opacity: .9;
+    margin-bottom: 5px;
+}
+
+.Card-title {
+    width: 100%;
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 10px;
+    transition: all .3s ease-in-out;
+}
+
+.Card-body {
+    margin-bottom: 0;
+    display: -webkit-box;
+    font-size: 14px;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: 0px;
+}
+
+.Card-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    column-gap: 10px;
+    bottom: 20px;
+    left: 10%;
+    z-index: 2;
+}
+
+.Card-buttons button {
+    width: 110px;
+    height: 40px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.primary {
+    cursor: pointer;
+    box-sizing: border-box;
+    color: white;
+    background-color: rgba(30, 136, 229,.9);
+    border: none;
+    /* box-shadow: rgba(255,255,255,.4) 2px 2px 2px 0px; */
+    z-index: 2;
+    transition: all .3s ease-in-out;
+}
+
+.primary:hover {
+    background-color: rgba(30, 136, 229,.3);
+}
+
+.primary:active {
+    box-shadow: none;
+}
+
+.secondary {
+    cursor: pointer;
+    box-sizing: border-box;
+    color: rgba(30, 136, 229, 1);
+    border: 1px solid rgba(30, 136, 229, 1);
+    /* box-shadow: rgba(30, 136, 229,1) 2px 2px 2px 0px; */
+    z-index: 2;
+    transition: all .3s ease-in-out;
+}
+
+.secondary:hover {
+    background-color: rgba(255, 255, 255,.8);
+}
+
+.secondary:active {
+    box-shadow: none;
+}
+
+.textButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    box-sizing: border-box;
+    z-index: 2;
+    width: 110px;
+    height: 40px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.Card:hover .Card-Overlay  {
+    opacity: 1;
+}
+
+.Card:hover .Card-body {
+    max-height: 300px;
+    opacity: 1;
+    margin-bottom: 20px;
+}

@@ -95,3 +95,11 @@ i::before {
     background-color: white;
 }
 
+.Main-Cards {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    column-gap: 20px;
+    width: 33%;
+    align-self: center;
+}
