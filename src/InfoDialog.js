@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Dialog from '@mui/material/Dialog';
-import { Box, Grid, IconButton } from '@mui/material';
+import { Box, IconButton } from '@mui/material';
 import { CloseOutlined } from '@mui/icons-material';
 import InfoDialogCard from './InfoDialogCard copy';
 
@@ -21,9 +21,9 @@ function SimpleDialog({open, handleClose, details}) {
       ))}
 
       </Box>
-      {/* <IconButton onClick={handleClose} color='primary' sx={{backgroundColor: 'white', position: 'fixed', top: 'calc(50% - 40vh)', left: {xs: '95%', md: '58%'}, zIndex: 10, marginTop:'12px', '&:hover': {backgroundColor: 'white', opacity: .8}, transition: 'all .3s ease-in-out'}}>
+      <IconButton onClick={handleClose} color='primary' sx={{backgroundColor: 'white', position: 'fixed', top: 'calc(50% - 40vh)', right: 30, zIndex: 10, marginTop:'12px', '&:hover': {backgroundColor: 'white', opacity: .7}, transition: 'all .2s ease-in-out'}}>
            <CloseOutlined sx={{'&:hover': 'transform(scale(1.2))'}} />
-           </IconButton>  */}
+           </IconButton>
     </Dialog>
   );
 }

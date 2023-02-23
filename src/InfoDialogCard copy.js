@@ -1,5 +1,4 @@
-import { CloseOutlined } from "@mui/icons-material";
-import { Grid, IconButton, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import React from "react";
 import './PortfolioCard.css'
 
@@ -20,10 +19,7 @@ export default function InfoDialogCard({ heading, image, body, background, color
                         {t}
                     </Typography>
                 ))}
-            </Grid>
-            <IconButton onClick={handleClose} color='primary' sx={{backgroundColor: 'white', position: 'fixed', top: 'calc(50% - 40vh)', right: 30, zIndex: 10, marginTop:'12px', '&:hover': {backgroundColor: 'white', opacity: .8}, transition: 'all .3s ease-in-out'}}>
-           <CloseOutlined sx={{'&:hover': 'transform(scale(1.2))'}} />
-           </IconButton> 
+            </Grid> 
         </Grid>
     )
 }
