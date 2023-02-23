@@ -17,7 +17,7 @@ export default function Contact() {
             <Grid container item direction='column' alignItems='flex-start' rowGap={2}>
                 <List disablePadding sx={{ height: '100%', width: '100%' }}>
                     {items.map(i => (
-                        <ListItemButton href={i.link} sx={{ width: '100%'  }}>
+                        <ListItemButton key={i.link} href={i.link} sx={{ width: '100%'  }}>
                         <ListItemIcon sx={{ color: blue[600] }}>
                             {i.icon}
                         </ListItemIcon>

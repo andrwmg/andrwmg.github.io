@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 import AppAboutImage from "./AppAboutImage";
 import AppAboutText from "./AppAboutText";
 import createScrollSnap from "scroll-snap";
-import seeds from "./AboutTeslaMartV2Seeds";
+import seeds from "./TeslamartDetails";
 
 export default function AppAbout() {
   const container = useRef(null);

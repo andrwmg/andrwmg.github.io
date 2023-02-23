@@ -20,13 +20,16 @@ import SoftwareCard from './SoftwareCard';
 export default function Resume() {
 
     const [open, setOpen] = useState(false)
+    const [details, setDetails] = useState(null)
 
-    const handleClickOpen = () => {
+    const handleClickOpen = (details) => {
+        setDetails(details)
         setOpen(true);
       };
 
       const handleClose = (evt) => {
           evt.preventDefault()
+          setDetails(null)
         setOpen(false);
       };
 
@@ -34,16 +37,16 @@ export default function Resume() {
         <>
             <Grid container item direction='row' alignItems='flex-start' justifyContent='space-between' py={2} bgcolor='#f3f3f3' maxWidth='100vw'>
 
-            <InfoDialog open={open} handleClose={handleClose} />
+            <InfoDialog open={open} handleClose={handleClose} details={details} />
 
                 <Grid container item direction='column' xs={12} lg={4} order={1} py={2} px={{ xs: 2, sm: 2, md: 4, xl: 5 }} alignItems='flex-start'>
                     <Grid container item width='100%' mb={2}>
                         <img src={cover} style={{ borderRadius: '.5rem', width: '100%', height: '320px', objectFit: 'cover' }} alt="" />
                     </Grid>
-                    <Typography sx={{ fontSize: '2.75rem', fontWeight: 700 }}>
+                    <Typography fontSize='2.75rem' fontWeight={700}>
                         Andrew Gay
                     </Typography>
-                    <Typography sx={{ fontSize: '1.4rem' }}>
+                    <Typography fontSize='1.4rem'>
                         Software Engineer
                     </Typography>
                 </Grid>

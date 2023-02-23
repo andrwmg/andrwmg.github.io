@@ -6,27 +6,28 @@ import details from './DetailsTrimmed.png'
 import newForm from './NewTrimmed.png'
 import edit from './EditTrimmed.png'
 
-const teslaMartV2 = [{
-    // imageUrl: 'https://res.cloudinary.com/deuft4auk/image/upload/v1671405453/Personal%20Website/cray_arrange_s8krcq.png',
-    heading: 'Overview', 
-    text: [
+const teslamartDetails = [
+//     {
+//     imageUrl: 'https://res.cloudinary.com/deuft4auk/image/upload/v1671405453/Personal%20Website/cray_arrange_s8krcq.png',
+//     heading: 'Overview', 
+//     text: [
 
-        'The Tesla Mart V2 CRUD webapp was built using React for the frontend framework and Node for the backend. All RESTful routes are completed using Express with a MongoDB database. This was an individual effort that represents the culmination of two bootcamps and hundreds of hours of research. Building this webapp was a great learning experience and I am very proud of the result.',
+//         'The Tesla Mart V2 CRUD webapp was built using React for the frontend framework and Node for the backend. All RESTful routes are completed using Express with a MongoDB database. This was an individual effort that represents the culmination of two bootcamps and hundreds of hours of research. Building this webapp was a great learning experience and I am very proud of the result.',
 
-        'Features that I have not yet added include:',
+//         'Features that I have not yet added include:',
 
-        'Reset password email',
-        'Multiple selections on a filter'
-        ,
-        'Listing status',
-        'Comment replies',
-        "‘My Listings’ page",
-        "‘Favorites’ page'",
+//         'Reset password email',
+//         'Multiple selections on a filter'
+//         ,
+//         'Listing status',
+//         'Comment replies',
+//         "‘My Listings’ page",
+//         "‘Favorites’ page'",
 
-        'If you have any feedback, please feel free to contact me. I am open to all criticism and look forward to resolving any issues through continued learning.'
+//         'If you have any feedback, please feel free to contact me. I am open to all criticism and look forward to resolving any issues through continued learning.'
 
-    ]
-},
+//     ]
+// },
 
 {
     imageUrl: profile,
@@ -129,4 +130,4 @@ const teslaMartV2 = [{
 }
 ]
 
-export default teslaMartV2
+export default teslamartDetails

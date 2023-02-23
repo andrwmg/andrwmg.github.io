@@ -1,12 +1,11 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Dialog from '@mui/material/Dialog';
-import { Box, IconButton } from '@mui/material';
+import { Box, Grid, IconButton } from '@mui/material';
 import { CloseOutlined } from '@mui/icons-material';
 import InfoDialogCard from './InfoDialogCard copy';
-import teslaMartV2 from './AboutTeslaMartV2Seeds';
 
-function SimpleDialog({open, handleClose}) {
+function SimpleDialog({open, handleClose, details}) {
 
     const scrollRef = React.useRef(null)
 
@@ -16,14 +15,15 @@ function SimpleDialog({open, handleClose}) {
 
   return (
     <Dialog open={open} onClose={handleClose} sx={{bgcolor: 'transparent', '& .MuiPaper-root': {backgroundColor: 'transparent', boxShadow: 'none', minWidth: '100vw'}}}>
-      <Box ref={scrollRef} display='flex' direction='row' overflow='scroll' wrap='nowrap' height='80vh' width='100%' position='relative' px={3} columnGap={3} bgcolor='transparent'>
-      {teslaMartV2.map((t, index) => (
-          index > 0 && <InfoDialogCard key={t.heading} heading={t.heading} image={t.imageUrl} body={t.text} background={t.background} color={t.color} />
+      <Box ref={scrollRef} display='flex' direction='row' overflow='scroll' wrap='nowrap' height='80vh' width='100%' px={3} columnGap={3} bgcolor='transparent'>
+      {details && details.map((t) => (
+          <InfoDialogCard key={t.heading} handleClose={handleClose} heading={t.heading} image={t.imageUrl} body={t.text} background={t.background} color={t.color} />
       ))}
+
       </Box>
-      <IconButton onClick={handleClose} color='primary' sx={{backgroundColor: 'white', position: 'fixed', top: 0, right: 0, zIndex: 10, marginTop:'12px', marginRight: '100px', '&:hover': {backgroundColor: 'white', opacity: .8}, transition: 'all .3s ease-in-out'}}>
-           <CloseOutlined />
-           </IconButton> 
+      {/* <IconButton onClick={handleClose} color='primary' sx={{backgroundColor: 'white', position: 'fixed', top: 'calc(50% - 40vh)', left: {xs: '95%', md: '58%'}, zIndex: 10, marginTop:'12px', '&:hover': {backgroundColor: 'white', opacity: .8}, transition: 'all .3s ease-in-out'}}>
+           <CloseOutlined sx={{'&:hover': 'transform(scale(1.2))'}} />
+           </IconButton>  */}
     </Dialog>
   );
 }
@@ -32,12 +32,13 @@ SimpleDialog.propTypes = {
   open: PropTypes.bool.isRequired,
 };
 
-export default function InfoDialog({open, handleClose}) {
+export default function InfoDialog({open, handleClose, details}) {
 
   return (
       <SimpleDialog
         open={open}
         handleClose={handleClose}
+        details={details}
       />
   );
 }

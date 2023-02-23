@@ -1,10 +1,10 @@
-import { InfoOutlined } from "@mui/icons-material";
+import { CloseOutlined } from "@mui/icons-material";
 import { Grid, IconButton, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import './PortfolioCard.css'
 
-export default function InfoDialogCard({ heading, image, body, background, color }) {
+export default function InfoDialogCard({ heading, image, body, background, color, handleClose }) {
 
     const [flip, setFlip] = useState(true)
 
@@ -26,11 +26,12 @@ export default function InfoDialogCard({ heading, image, body, background, color
     }, [])
 
     return (
-        <Grid container item direction={{xs: 'column', md: 'row'}} xs={10} height='100%' width='90vw' minWidth={{xs: '95%', md: '63%'}} py={{xs: 2, md: 0}} borderRadius={2} overflow='hidden' bgcolor={background} wrap='nowrap'>
-            <Grid container item direction='column' justifyContent='center' alignItems='center' height={{xs: '50%', md: '100%'}} xs={12} md={6}>
-                <img src={image} alt="" style={{ objectFit: 'contain', width: '100%', height: '100%' }} />
+        <Grid container item direction={{xs: 'column', md: 'row'}} xs={10} minWidth={{xs: '95%', md: '63%'}} py={{xs: 2, md: 0}} borderRadius={2} overflow='hidden' bgcolor={background} wrap='nowrap' position='relative'>
+            <Grid container item direction='column' justifyContent='center' position='relative' alignItems='center' px={{xs: 0, md: 2}} height={{xs: '50%', md: '100%'}} xs={12} md={6}>
+                <Grid item container position='absolute' top={0} bottom={0} left={0} right={0} zIndex={10} />
+                <img src={image} alt="" style={{ objectFit: 'contain', width: '100%', height: '100%', zIndex: 1 }} />
             </Grid>
-            <Grid item container direction='column' maxHeight={{xs: '50%', md: '100%'}} xs={12} md={6} zIndex={1} pl={{xs: '5%', md: '10px'}} pr='5%' rowGap={2} color={color} overflow='scroll' wrap='nowrap' my='7.5%'>
+            <Grid item container direction='column' maxHeight={{xs: '50%', md: '100%'}} xs={12} md={6} zIndex={1} pl={{xs: '5%', md: '10px'}} pr='5%' rowGap={2} color={color} overflow='scroll' wrap='nowrap' my={{xs: '12px', md: '7.5%'}}>
 
                 <Typography fontSize='24px' color={color}>
                     {heading}
@@ -41,6 +42,9 @@ export default function InfoDialogCard({ heading, image, body, background, color
                     </Typography>
                 ))}
             </Grid>
+            <IconButton onClick={handleClose} color='primary' sx={{backgroundColor: 'white', position: 'fixed', top: 'calc(50% - 40vh)', right: 30, zIndex: 10, marginTop:'12px', '&:hover': {backgroundColor: 'white', opacity: .8}, transition: 'all .3s ease-in-out'}}>
+           <CloseOutlined sx={{'&:hover': 'transform(scale(1.2))'}} />
+           </IconButton> 
         </Grid>
     )
 }

@@ -17,6 +17,11 @@ export default function SoftwareCard({ src, company, title, body, view, details,
         setHover(!hover)
     }
 
+    const handleDetailsClick = (evt) => {
+        evt.preventDefault()
+        handleClickOpen(details)
+    }
+
     return (
         <Grid container item direction='column' xs minHeight={{xs: '350px', md: '450px'}} minWidth={{xs: '100%', md: 'calc(50% - 12px)'}} borderRadius={2} position='relative' onMouseEnter={handleEnter} onMouseLeave={handleLeave} onClick={handleClick} overflow='hidden' wrap="nowrap">
             <Grid item container position='absolute' top={hover ? 0 : '50%'} bottom={hover ? 0 : '50%'} right={0} left={0} zIndex={1} bgcolor='rgba(255, 255, 255, .95)' sx={{ opacity: hover ? 1 : 1, transition: 'all .3s ease-in-out' }} />
@@ -39,7 +44,7 @@ export default function SoftwareCard({ src, company, title, body, view, details,
                 </Grid>
                 <Grid container item columnGap={{xs: 1, sm: 2}} mt='auto' zIndex={1}>
                     {view ? <Button href={view} variant='contained' disabled={!hover}>View</Button> : null}
-                    {details ? <Button onClick={handleClickOpen} variant='contained' disabled={!hover}>Details</Button> : null}
+                    <Button onClick={handleDetailsClick} variant='contained' disabled={!hover}>Details</Button>
                     {github ? <Button href={github} variant='contained' disabled={!hover}>Github</Button> : null}
                 </Grid>
             </Grid>
