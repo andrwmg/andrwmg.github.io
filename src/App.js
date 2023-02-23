@@ -13,7 +13,7 @@ function App() {
       <DrawerAppBar>
         <Routes>
         <Route path="/" element={<Resume />} />
-        <Route path="*" element={<Navigate replace to="/sw/resume" />} />
+        <Route path="*" element={<Navigate replace to="/" />} />
 
           {/* <Route path="/" element={<Navigate replace to="/sw/resume" />} />
           <Route path="/sw/resume" element={<Resume />} />
