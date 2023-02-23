@@ -8,7 +8,7 @@ const websites = [
     {
         wide: false,
         src: [v2],
-        title: 'Tesla Mart V2',
+        title: 'Tesla Mart',
         body: ['Tesla Mart is a CRUD web app where current and future Tesla owners can buy and sell their vehicles.', 'The frontend was designed using React and MUI, while the backend was created using NodeJS, Express, and MongoDB.'],
         bullets: [
             'React',
