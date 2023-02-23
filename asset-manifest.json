@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4a66e52a.css",
+    "main.js": "/static/js/main.ac1ab6b6.js",
+    "static/js/787.919d2829.chunk.js": "/static/js/787.919d2829.chunk.js",
+    "static/media/DetailsTrimmed.png": "/static/media/DetailsTrimmed.12fbf66ac5530a33d97e.png",
+    "static/media/EditTrimmed.png": "/static/media/EditTrimmed.a8ed3c264245252193dc.png",
+    "static/media/Cover-min.jpg": "/static/media/Cover-min.fe23fec656acba5cfc53.jpg",
+    "static/media/canyon-min.jpg": "/static/media/canyon-min.bf42b1fc23d3ea13d3dd.jpg",
+    "static/media/ProfileTrimmed.png": "/static/media/ProfileTrimmed.d1d3ca0ec57c1ad3c62a.png",
+    "static/media/ListingsTrimmed.png": "/static/media/ListingsTrimmed.5dc354fa65a232091081.png",
+    "static/media/MessagesTrimmed.png": "/static/media/MessagesTrimmed.28443543b3af0d5d1103.png",
+    "static/media/NewTrimmed.png": "/static/media/NewTrimmed.7fba5e6a424102a2caaf.png",
+    "static/media/v1Cover-min.jpg": "/static/media/v1Cover-min.8f86094cd4813fef32eb.jpg",
+    "static/media/rpgImage.png": "/static/media/rpgImage.486071603aff495f0c41.png",
+    "static/media/rpg1.png": "/static/media/rpg1.57c99f042e236cc2cec7.png",
+    "static/media/rpg2.png": "/static/media/rpg2.f7acd115f4f18af9eede.png",
+    "index.html": "/index.html",
+    "main.4a66e52a.css.map": "/static/css/main.4a66e52a.css.map",
+    "main.ac1ab6b6.js.map": "/static/js/main.ac1ab6b6.js.map",
+    "787.919d2829.chunk.js.map": "/static/js/787.919d2829.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a66e52a.css",
+    "static/js/main.ac1ab6b6.js"
+  ]
+}
