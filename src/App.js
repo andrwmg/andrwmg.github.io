@@ -12,10 +12,13 @@ function App() {
     <div className="App">
       <DrawerAppBar>
         <Routes>
-          <Route path="/" element={<Navigate replace to="/sw/resume" />} />
+        <Route path="/" element={<Resume />} />
+        <Route path="*" element={<Navigate replace to="/sw/resume" />} />
+
+          {/* <Route path="/" element={<Navigate replace to="/sw/resume" />} />
           <Route path="/sw/resume" element={<Resume />} />
           <Route path="/sw/portfolio" element={<Portfolio />} />
-          <Route path="/sw/portfolio/teslamartv2" element={<AppAbout />} />
+          <Route path="/sw/portfolio/teslamartv2" element={<AppAbout />} /> */}
         </Routes>
       </DrawerAppBar>
     </div>
