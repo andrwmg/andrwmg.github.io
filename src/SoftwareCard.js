@@ -38,7 +38,7 @@ export default function SoftwareCard({ src, company, title, body, view, details,
                     </Typography>
                     <Grid container item columnGap={1}>
                         {chips && chips.map(c => (
-                            <Chip label={c} variant="outlined" />
+                            <Chip label={c} variant='outlined' size="small" />
                         ))}
                     </Grid>
                     {body.map(b => (
