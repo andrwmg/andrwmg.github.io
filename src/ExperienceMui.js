@@ -43,7 +43,7 @@ export default function Experience() {
                     <Typography variant='subtitle1' fontSize='1rem' fontWeight='400'>
                         {item.title}
                     </Typography>
-                    <Typography color={grey[900]} fontSize='1rem' fontWeight='200'>
+                    <Typography color={grey[600]} fontSize='1rem' fontWeight='400'>
                         {item.info}
                     </Typography>
                     <ul style={{paddingInlineStart: 16, marginBlockEnd: index === 1 && 0}}>

@@ -26,12 +26,11 @@ export default function InfoDialogCard({ heading, image, body, background, color
     }, [])
 
     return (
-        <Grid container item direction={{xs: 'column', md: 'row'}} xs={10} height='100%' width='90vw' minWidth={{xs: '95%', md: '63%'}} pl={0} px={2} py={{xs: 2, md: 6}} borderRadius={2} overflow='hidden' bgcolor={background} wrap='nowrap'>
-            <Grid container item direction='column' justifyContent='center' alignItems='center' height={{xs: '50%', md: '100%'}} sx={{width: {xs: '100%', md: '55%'}}}>
+        <Grid container item direction={{xs: 'column', md: 'row'}} xs={10} height='100%' width='90vw' minWidth={{xs: '95%', md: '63%'}} py={{xs: 2, md: 0}} borderRadius={2} overflow='hidden' bgcolor={background} wrap='nowrap'>
+            <Grid container item direction='column' justifyContent='center' alignItems='center' height={{xs: '50%', md: '100%'}} xs={12} md={6}>
                 <img src={image} alt="" style={{ objectFit: 'contain', width: '100%', height: '100%' }} />
             </Grid>
-            <Grid item container direction='column' justifyContent='flex-start' alignSelf='flex-end' height={{xs: '50%', md: '100%'}} width={{xs: '100%', md: '50%'}} zIndex={1} pl={{xs: 2, md: 3}} pr={{xs: 2, md: 1}} rowGap={2} color={color} overflow='scroll' wrap='nowrap' 
-            bgcolor={{xs: background, md: 'transparent'}}>
+            <Grid item container direction='column' maxHeight={{xs: '50%', md: '100%'}} xs={12} md={6} zIndex={1} pl={{xs: '5%', md: '10px'}} pr='5%' rowGap={2} color={color} overflow='scroll' wrap='nowrap' my='7.5%'>
 
                 <Typography fontSize='24px' color={color}>
                     {heading}

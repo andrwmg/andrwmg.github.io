@@ -7,13 +7,13 @@ import About from './AboutMui';
 import Contact from './ContactMui';
 import { Grid, Typography } from '@mui/material';
 import Footer from './Footer';
-import PortfolioCard from './PortfolioCard';
-import PortfolioCard2 from './PortfolioCard copy';
+// import PortfolioCard from './PortfolioCard';
+// import PortfolioCard2 from './PortfolioCard copy';
 import { blue } from 'material-ui-colors';
-import products from './MechanicalSeeds';
+// import products from './MechanicalSeeds';
 import websites from './SoftwareSeeds';
-import PortfolioCard3 from './PortfolioCard copy 2';
-import CardContainer from './CardContainer';
+// import PortfolioCard3 from './PortfolioCard copy 2';
+// import CardContainer from './CardContainer';
 import InfoDialog from './InfoDialog';
 import SoftwareCard from './SoftwareCard';
 
@@ -37,7 +37,7 @@ export default function Resume() {
             <InfoDialog open={open} handleClose={handleClose} />
 
                 <Grid container item direction='column' xs={12} lg={4} order={1} py={2} px={{ xs: 2, sm: 2, md: 4, xl: 5 }} alignItems='flex-start'>
-                    <Grid container item width='100%'>
+                    <Grid container item width='100%' mb={2}>
                         <img src={cover} style={{ borderRadius: '.5rem', width: '100%', height: '320px', objectFit: 'cover' }} alt="" />
                     </Grid>
                     <Typography sx={{ fontSize: '2.75rem', fontWeight: 700 }}>
@@ -79,7 +79,7 @@ export default function Resume() {
 
             <Grid item container direction='column' my={4} px={{ xs: 2, sm: 2, md: 4, xl: 5 }}>
                 <Typography fontSize='1.75rem' fontWeight={600} mb={3} color={blue[600]}> Project Examples</Typography>
-                <Grid item container direction='row' gap={2} justifyContent='space-evenly'>
+                <Grid item container direction='row' gap='16px' justifyContent='space-evenly'>
                     {websites.map((w, index) => index < 2 &&
                         <SoftwareCard key={w.title} wide={w.wide} src={w.src} company={w.company} title={w.title} body={w.body} bullets={w.bullets} productUrl={w.productUrl} view={w.view} details={w.details} github={w.github} handleClickOpen={handleClickOpen} />
                 )}

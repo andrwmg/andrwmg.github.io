@@ -54,7 +54,7 @@ export default function Education() {
                 :
                 <Typography variant='subtitle1' sx={{ fontSize: '1rem', fontWeight: '400' }}>{item.details}</Typography>
                         }
-                <Typography color={grey[900]} sx={{ fontSize: '1rem', fontWeight: '200' }}>{item.dates}</Typography>
+                <Typography color={grey[600]} fontSize='1rem' fontWeight='400'>{item.dates}</Typography>
                 </Grid>
                 ))}
                 </Grid>

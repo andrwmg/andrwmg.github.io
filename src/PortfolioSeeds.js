@@ -17,7 +17,7 @@ const websites = [
         url: 'https://basicrpgproject.herokuapp.com/',
         github: 'https://github.com/andrwmg/simplerpggame',
         image: rpg,
-        description: 'In order to build this simple role-playing game (RPG), I learned how to use the Tiled app to design a map and vanilla JavaScript to implement the mechanics. Use the A,W,S,D keys to "move" around the map and try not to get caught in the grassy patch (work in progress)!'
+        description: 'In order to build this simple role-playing game (RPG), I learned how to use the Tiled app to design a map and vanilla JavaScript to implement the mechanics. Use the A, W, S, and D keys to "move" around the map and try not to get caught in the grassy patch (work in progress)!'
     },
     {
         name: 'Tesla Mart',
