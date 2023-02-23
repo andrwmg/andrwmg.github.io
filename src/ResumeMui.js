@@ -82,9 +82,9 @@ export default function Resume() {
 
             <Grid item container direction='column' my={4} px={{ xs: 2, sm: 2, md: 4, xl: 5 }}>
                 <Typography fontSize='1.75rem' fontWeight={600} mb={3} color={blue[600]}> Project Examples</Typography>
-                <Grid item container direction='row' gap='16px' justifyContent='space-evenly'>
+                <Grid item container direction='row' gap='16px'>
                     {websites.map((w, index) => index < 2 &&
-                        <SoftwareCard key={w.title} wide={w.wide} src={w.src} company={w.company} title={w.title} body={w.body} bullets={w.bullets} productUrl={w.productUrl} view={w.view} details={w.details} github={w.github} handleClickOpen={handleClickOpen} />
+                        <SoftwareCard key={w.title} wide={w.wide} src={w.src} company={w.company} title={w.title} body={w.body} bullets={w.bullets} productUrl={w.productUrl} view={w.view} details={w.details} github={w.github} handleClickOpen={handleClickOpen} chips={w.chips} />
                 )}
                     </Grid>
             </Grid>

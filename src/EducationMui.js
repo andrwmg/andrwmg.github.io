@@ -9,12 +9,19 @@ const EducationLink = styled(Link)( {
 })
 
 const education = [
+
+    {title: 'Harvard University',
+    items: 
+    [{details: 'CS50 Certificate',
+    dates: 'Jan 2023 - Present'}]
+    },
+
     {title: 'Udemy',
     items: [
-        {details: 'UI/UX Product Design Bootcamp',
-        dates: 'Jan 2023 - Present'},
-        {details: 'React Native Bootcamp',
-        dates: 'Jan 2023 - Present'},
+        // {details: 'UI/UX Product Design Bootcamp',
+        // dates: 'Jan 2023 - Present'},
+        // {details: 'React Native Bootcamp',
+        // dates: 'Jan 2023 - Present'},
         {details: 'React Bootcamp',
         dates: 'Sep 2022 - Nov 2022',
     link: 'https://www.udemy.com/certificate/UC-1f238874-5b9d-42f6-b3ea-c297fc173f6a/'},
@@ -23,16 +30,19 @@ const education = [
     link: 'https://www.udemy.com/certificate/UC-ed7445e1-3715-4dfd-9f9d-ffcc1f16c431/'}
     ]
     },
+
     {title: 'UC San Diego',
     items:  
     [{details: 'Adobe Illustrator',
     dates: 'Oct 2016 - Dec 2016'}]
     },
+
     {title: 'University of Delaware',
     items: 
     [{details: 'B.S. Mechanical Engineering',
     dates: 'Aug 2008 - Dec 2012'}]
     }
+
 ]
 
 export default function Education() {

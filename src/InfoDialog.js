@@ -15,7 +15,7 @@ function SimpleDialog({open, handleClose, details}) {
 
   return (
     <Dialog open={open} onClose={handleClose} sx={{bgcolor: 'transparent', '& .MuiPaper-root': {backgroundColor: 'transparent', boxShadow: 'none', minWidth: '100vw'}}}>
-      <Box ref={scrollRef} display='flex' direction='row' overflow='scroll' wrap='nowrap' height='80vh' width='100%' px={3} columnGap={3} bgcolor='transparent'>
+      <Box ref={scrollRef} display='flex' direction='row' overflow='scroll' wrap='nowrap' maxHeight='80vh' width='100%' px={3} columnGap={3} bgcolor='transparent'>
       {details && details.map((t) => (
           <InfoDialogCard key={t.heading} handleClose={handleClose} heading={t.heading} image={t.imageUrl} body={t.text} background={t.background} color={t.color} />
       ))}

@@ -6,7 +6,7 @@ import React from 'react'
 const items = [
     {text: 'andrwmg@gmail.com', icon: <MailOutline />, link: 'mailto: andrwmg@gmail.com'},
     {text: '610-888-4468', icon: <PhoneOutlined />, link: 'tel:6108884468'},
-    {text: 'andrewmichaelgay.com', icon: <WebOutlined />, link: 'https://www.andrewmichaelgay.com'},
+    // {text: 'andrewmichaelgay.com', icon: <WebOutlined />, link: 'https://www.andrewmichaelgay.com'},
     {text: 'linkedin.com/in/andrwmg', icon: <LinkedIn />, link: 'https://www.linkedin.com/in/andrwmg'},
     {text: 'github.com/andrwmg', icon: <GitHub />, link: 'https://github.com/andrwmg'}]
 

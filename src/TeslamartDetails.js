@@ -31,8 +31,8 @@ const teslamartDetails = [
 
 {
     imageUrl: profile,
-    background: orange[100],
-    color: orange[800],
+    background: '#ffe0b2' || orange[100],
+    color: '#ef6c00' || orange[800],
     heading: 'Profile', 
     text: [
 
@@ -45,8 +45,8 @@ const teslamartDetails = [
 
 {
     imageUrl: messages,
-    background: blue[50],
-    color: blue[700],
+    background: '#e3f2fd' || blue[50],
+    color: '#1976d2' || blue[700],
     heading: 'Messaging', 
     text: [
 
@@ -62,8 +62,8 @@ const teslamartDetails = [
 
 {
     imageUrl: listings,
-    background: red[50],
-    color: red[800],
+    background: '#ffebee' || red[50],
+    color: '#c62828' || red[800],
     heading: 'Listings', 
     text: [
 
@@ -80,8 +80,8 @@ const teslamartDetails = [
 
 {
     imageUrl: newForm,
-    background: teal[50],
-    color: teal[800],
+    background: '#e0f2f1' || teal[50],
+    color: '#00695c' || teal[800],
     heading: "New Listing", 
     text: [
 
@@ -97,8 +97,8 @@ const teslamartDetails = [
 
 {
     imageUrl: details,
-    background: yellow[100],
-    color: yellow[900],
+    background: '#fff9c4' || yellow[100],
+    color: '#f57f17' || yellow[900],
     heading: "Listing Details", 
     text: [
 
@@ -115,8 +115,8 @@ const teslamartDetails = [
 
 {
     imageUrl: edit,
-    background: deepPurple[50],
-    color: deepPurple[800],
+    background: '#ede7f6' || deepPurple[50],
+    color: '#4527a0' || deepPurple[800],
     heading: "Edit Listing", 
     text: [
 
