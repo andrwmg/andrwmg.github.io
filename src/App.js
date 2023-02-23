@@ -7,7 +7,7 @@ import AppAbout from "./AppAbout";
 import DrawerAppBar from "./Navbar";
 
 function App() {
-  // UseRedirectToHttps();
+  UseRedirectToHttps();
   return (
     <div className="App">
       <DrawerAppBar>
