@@ -33,7 +33,7 @@ export default function Experience() {
 
     return (
         <>
-            <Typography fontSize='1.75rem' fontWeight={600} mb={3} color={blue[600]}>Experience</Typography>
+            <Typography fontSize='1.75rem' fontWeight={600} color={blue[600]}>Experience</Typography>
             <Grid container item rowGap={2}>
                 {items.map((item, index) => (
                 <Grid key={item.company} container item direction='column'>
