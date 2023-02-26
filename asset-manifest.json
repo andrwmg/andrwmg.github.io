@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.653d0354.css",
-    "main.js": "/static/js/main.5fd625ac.js",
+    "main.js": "/static/js/main.fb7dafa5.js",
     "static/js/787.919d2829.chunk.js": "/static/js/787.919d2829.chunk.js",
     "static/media/DetailsTrimmed.png": "/static/media/DetailsTrimmed.12fbf66ac5530a33d97e.png",
     "static/media/EditTrimmed.png": "/static/media/EditTrimmed.a8ed3c264245252193dc.png",
@@ -15,13 +15,14 @@
     "static/media/rpgImage.png": "/static/media/rpgImage.486071603aff495f0c41.png",
     "static/media/rpg1.png": "/static/media/rpg1.57c99f042e236cc2cec7.png",
     "static/media/rpg2.png": "/static/media/rpg2.f7acd115f4f18af9eede.png",
+    "static/media/react.png": "/static/media/react.f3e576ba08e6be927148.png",
     "index.html": "/index.html",
     "main.653d0354.css.map": "/static/css/main.653d0354.css.map",
-    "main.5fd625ac.js.map": "/static/js/main.5fd625ac.js.map",
+    "main.fb7dafa5.js.map": "/static/js/main.fb7dafa5.js.map",
     "787.919d2829.chunk.js.map": "/static/js/787.919d2829.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.653d0354.css",
-    "static/js/main.5fd625ac.js"
+    "static/js/main.fb7dafa5.js"
   ]
 }
