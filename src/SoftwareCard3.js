@@ -30,8 +30,8 @@ export default function SoftwareCard({
     dialogState
 }) {
 
-    const minWidth = useMediaQuery('(min-width: 600px)')
-    const maxWidth = useMediaQuery('(max-width: 600px)')
+    const minWidth = useMediaQuery('(min-width: 900px)')
+    const maxWidth = useMediaQuery('(max-width: 900px)')
 
     const [open, setOpen] = useState(false);
 

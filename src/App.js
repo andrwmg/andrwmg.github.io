@@ -1,7 +1,7 @@
 import "./App.css";
 import Resume from "./Resume";
 import { Route, Routes, Navigate } from "react-router-dom";
-import UseRedirectToHttps from "./hooks/useRedirectToHttps";
+// import UseRedirectToHttps from "./hooks/useRedirectToHttps";
 import DrawerAppBar from "./Navbar";
 import { unstable_createMuiStrictModeTheme } from "@mui/material";
 import { ThemeProvider } from "@mui/system";
@@ -82,7 +82,7 @@ const theme = unstable_createMuiStrictModeTheme({
 });
 
 function App() {
-  UseRedirectToHttps();
+  // UseRedirectToHttps();
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
