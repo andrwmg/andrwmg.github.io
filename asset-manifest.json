@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.653d0354.css",
-    "main.js": "/static/js/main.f547b876.js",
+    "main.css": "/static/css/main.fb4b466d.css",
+    "main.js": "/static/js/main.88e92d18.js",
     "static/js/787.919d2829.chunk.js": "/static/js/787.919d2829.chunk.js",
     "static/media/DetailsTrimmed.png": "/static/media/DetailsTrimmed.12fbf66ac5530a33d97e.png",
     "static/media/EditTrimmed.png": "/static/media/EditTrimmed.a8ed3c264245252193dc.png",
@@ -16,13 +16,21 @@
     "static/media/rpg1.png": "/static/media/rpg1.57c99f042e236cc2cec7.png",
     "static/media/rpg2.png": "/static/media/rpg2.f7acd115f4f18af9eede.png",
     "static/media/react.png": "/static/media/react.f3e576ba08e6be927148.png",
+    "static/media/mongodb.png": "/static/media/mongodb.4d1763a20af23f3dbc1d.png",
+    "static/media/c.png": "/static/media/c.272d1cfdb06887e8671d.png",
+    "static/media/css.png": "/static/media/css.8aaf7833370a6845139c.png",
+    "static/media/html.png": "/static/media/html.be50d4568ab0cb01edb8.png",
+    "static/media/node.png": "/static/media/node.9450a6006be4fcb85583.png",
+    "static/media/sql.png": "/static/media/sql.b4208114d2158128e6d0.png",
+    "static/media/express.png": "/static/media/express.c0a5938442260d76c0f2.png",
+    "static/media/python.png": "/static/media/python.9c47735ea0c4a2d20349.png",
     "index.html": "/index.html",
-    "main.653d0354.css.map": "/static/css/main.653d0354.css.map",
-    "main.f547b876.js.map": "/static/js/main.f547b876.js.map",
+    "main.fb4b466d.css.map": "/static/css/main.fb4b466d.css.map",
+    "main.88e92d18.js.map": "/static/js/main.88e92d18.js.map",
     "787.919d2829.chunk.js.map": "/static/js/787.919d2829.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.653d0354.css",
-    "static/js/main.f547b876.js"
+    "static/css/main.fb4b466d.css",
+    "static/js/main.88e92d18.js"
   ]
 }
