@@ -16,15 +16,16 @@ import { grey } from "material-ui-colors";
 function DrawerAppBar(props) {
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", position: 'sticky', zIndex: 5 }}>
       <CssBaseline />
       <AppBar
         component="nav"
         sx={{
-          backgroundColor: grey[900],
-          zIndex: (theme) => theme.zIndex.drawer + 1,
+          backgroundColor: 'white',
+          // backgroundImage: 'linear-gradient(180deg, rgba(0, 0, 0,.75), rgba(0, 0, 0, 0))',
+          zIndex: (theme) => theme.zIndex.drawer + 5,
+          boxShadow: 'none'
         }}
-        position="fixed"
       >
         <Toolbar>
           <Typography
@@ -36,7 +37,7 @@ function DrawerAppBar(props) {
               display: "block",
               whiteSpace: "nowrap",
             }}
-            color="#fff"
+            color="#000"
           >
             Andrew Michael Gay
           </Typography>
@@ -61,8 +62,8 @@ function DrawerAppBar(props) {
             </Button> */}
             <Button
               href="https://drive.google.com/uc?export=download&id=1s38y5Lz6UtuFUUSC5hcSTVJXa4WKmwn-"
-              startIcon={<Download />}
-              sx={{ color: "#fff", ml: "auto" }}
+              // startIcon={<Download />}
+              sx={{ color: "#000", ml: "auto" }}
             >
               Resume
             </Button>

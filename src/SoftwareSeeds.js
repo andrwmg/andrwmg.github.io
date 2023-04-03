@@ -3,6 +3,19 @@ import v1 from './v1Cover-min.jpg'
 import v2 from './Cover-min.jpg'
 import rpgDetails from './RPGDetails'
 import teslaMartV2 from './TeslamartDetails'
+import react from './react.png'
+import html from './html.png'
+import css from './css.png'
+import javascript from './javascript.png'
+import python from './python.png'
+import mongodb from './mongodb.png'
+import express from './express.png'
+import node from './node.png'
+import bootstrap from './bootstrap.png'
+import mui from './mui.png'
+import illustrator from './illustrator.png'
+import photoshop from './photoshop.png'
+import c from './c.png'
 
 const websites = [
     {
@@ -23,7 +36,7 @@ const websites = [
             "‘Favorites’ page'",
         ],
         view: 'https://teslamartv2.herokuapp.com',
-        chips: ['React', 'Node', 'MongoDB', 'Express'],
+        chips: [react, mui, node, mongodb, express],
         details: teslaMartV2,
         github: 'https://github.com/andrwmg/teslamart',
     },
@@ -37,7 +50,7 @@ const websites = [
             'HTML',
             'Vanilla JavaScript',
         ],
-        chips: ['HTML', 'CSS', 'Vanilla JavaScript'],
+        chips: [html, css, javascript],
         view: 'https://basicrpgproject.herokuapp.com/',
         details: rpgDetails,
         github: 'https://github.com/andrwmg/simplerpggame',

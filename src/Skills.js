@@ -33,18 +33,19 @@ const skills = [
     { name: 'Express', progress: 60, icon: express },
     { name: 'C', progress: 60, icon: c },
     { name: 'SQL', progress: 60, icon: sql },
-
 ]
 
 export default function Skills() {
     return (
         <>
-            <Grid container item direction='row'>
-                <Typography fontSize='1.75rem' fontWeight={600} color={blue[600]}>Skills</Typography>
+            <Grid container item direction='row' justifyContent='center'>
+                <Typography variant='h2'>
+                    Skills
+                </Typography>
             </Grid>
-            <Grid container item columnGap={{xs: 0, sm: 4}} rowGap={4} direction='row'>
+            <Grid container item columnGap={{ xs: 2, sm: 4 }} rowGap={4} direction='row' justifyContent='center'>
                 {skills.map((skill, index) => (
-                    <Skill key={skill.name} index={index} skill={skill.name} icon={skill.icon} size={{xs: '40px', sm:'60px'}} />
+                    <Skill key={skill.name} index={index} skill={skill.name} icon={skill.icon} size={{ xs: '40px', sm: '40px' }} />
                 ))}
             </Grid>
         </>

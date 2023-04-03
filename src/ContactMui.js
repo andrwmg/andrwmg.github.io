@@ -1,5 +1,5 @@
 import { GitHub, LinkedIn, MailOutline, PhoneOutlined } from '@mui/icons-material'
-import { Grid, List, ListItemButton, ListItemIcon, ListItemText, Typography } from '@mui/material'
+import { Grid, IconButton, List, ListItemButton, ListItemIcon, ListItemText, Typography } from '@mui/material'
 import { blue } from 'material-ui-colors'
 import React from 'react'
 
@@ -15,6 +15,14 @@ export default function Contact() {
         <>
             <Typography fontSize='1.75rem' fontWeight={600} color={blue[600]}>Contact</Typography>
             <Grid container item direction='column' alignItems='flex-start' rowGap={2}>
+                <Grid container item direction='row' columnGap={3}>
+                    {items.map(i => (
+                <IconButton href={i.link} color='primary'>
+                    {i.icon}
+                </IconButton>
+
+                    ))}
+                </Grid>
                 <List disablePadding sx={{ height: '100%', width: '100%' }}>
                     {items.map(i => (
                         <ListItemButton key={i.link} href={i.link} sx={{ width: '100%'  }}>

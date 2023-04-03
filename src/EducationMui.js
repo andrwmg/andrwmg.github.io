@@ -16,7 +16,7 @@ const education = [
       {
         title: "CS50 Certificate",
         skills: ["C"],
-        dates: "Jan 2023 - Present",
+        dates: "Jan 2023 - March 2023",
       },
     ],
   },
