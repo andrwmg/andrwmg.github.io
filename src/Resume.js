@@ -62,6 +62,17 @@ export default function Resume() {
             >
                 <InfoDialog open={open} handleClose={handleClose} details={details} />
                 <Grid
+                container
+                item
+                position='absolute'
+                left={0}
+                right={0}
+                top={0}
+                bottom={0}
+                zIndex={1}
+                sx={{backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0,0) 50%, rgba(0, 0, 0,.9))"}}
+            />
+                <Grid
                     container
                     item
                     position='absolute'
