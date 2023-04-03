@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import {
     KeyboardArrowUp,
 } from "@mui/icons-material";
-import { Button, Chip, Grid, IconButton, Paper, Typography } from "@mui/material";
+import { Button, Chip, Grid, IconButton, Paper, Typography, useMediaQuery } from "@mui/material";
 import { Stack } from "@mui/system";
 import { blue, grey } from "material-ui-colors";
 import React, { useEffect, useState } from "react";
@@ -29,11 +29,24 @@ export default function SoftwareCard({
     chips,
     dialogState
 }) {
+
+    const minWidth = useMediaQuery('(min-width: 600px)')
+    const maxWidth = useMediaQuery('(max-width: 600px)')
+
     const [open, setOpen] = useState(false);
+
+    const handleHover = (e) => {
+        e.stopPropagation()
+        if (minWidth) {
+            setOpen(!open);
+        }
+    };
 
     const handleClick = (e) => {
         e.stopPropagation()
-        setOpen(!open);
+        if (maxWidth) {
+            setOpen(!open);
+        }
     };
 
     const handleDetailsClick = (evt) => {
@@ -56,8 +69,8 @@ export default function SoftwareCard({
                 direction="column"
                 xs
                 minHeight='100%'
-                onMouseEnter={handleClick}
-                onMouseLeave={handleClick}
+                onMouseEnter={handleHover}
+                onMouseLeave={handleHover}
                 // minWidth={{ xs: 1, md: "40vw" }}
                 position="relative"
                 overflow="hidden"
