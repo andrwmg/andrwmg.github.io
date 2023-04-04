@@ -1,6 +1,4 @@
-import { GitHub, LinkedIn, MailOutline, PhoneOutlined } from "@mui/icons-material";
-import { Grid, IconButton, Link, Typography } from "@mui/material";
-import { Stack } from "@mui/system";
+import { Grid, Link, Typography } from "@mui/material";
 import React from "react";
 
 export default function About() {
@@ -8,22 +6,12 @@ export default function About() {
     <Grid container item justifyContent='center'>
       <Grid container item direction='column' xs={11} md={7} gap={2} textAlign='center'>
         <Typography variant="body1">
-          I’m a Senior Mechanical Engineer with 8+ years of new product
-          development and sustaining experience. Thoughout my career, I have
-          designed 20+ products from concept to production and managed teams for
-          several sustaining projects. These products included sheet metal and
-          plastic injection molding design, PCA layout, and design verification
-          testing.
+          I’m a self taught Software Engineer who reignited my passion for coding after working for 8+ years as a mechanical engineer. One year ago, I dove headfirst into learning web development. I completed a 65+ hour full stack bootcamp, a 45+ hour React bootcamp, and a Harvard University computer science course. I’ve spent 500+ hours working on a variety of projects, from an online marketplace to a role playing game. I enjoy learning new skills and honing them through real-world applications and am excited to hit the ground running in my new career.
         </Typography>
         <Typography variant="body1">
-          I enjoy learning new skills and honing them through real-world
-          applications. I’m excited to apply my mechanical engineering and product
-          development experience to the next phase of my career.
+          If you'd like to learn more about my background, <Link color='primary' sx={{ textDecoration: 'none' }} href="https://drive.google.com/uc?export=download&id=MX4ZWU4RNRpj3mL2C9uz_dYX0p7O8GvX" >check out my resume!</Link>
         </Typography>
-        <Typography variant="body1">
-          If you'd like to learn more about my background, <Link color="primary" href="https://drive.google.com/uc?export=download&id=1MX4ZWU4RNRpj3mL2C9uz_dYX0p7O8GvX" sx={{ textDecoration: 'none' }} >check out my resume!</Link>
-        </Typography>
-      </Grid>
+    </Grid>
     </Grid>
   );
 }

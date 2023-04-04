@@ -1,13 +1,9 @@
-import { LinkedIn, Mail, Phone } from "@mui/icons-material"
-import { Grid, IconButton, Typography } from "@mui/material"
-import { Stack } from "@mui/system"
-import { blue } from "material-ui-colors"
+import { Grid, Typography } from "@mui/material"
 import React from "react"
+import websites from "../seeds/SoftwareSeeds";
 import Card from "./Card"
-import products from "../seeds/MechanicalSeeds";
 
-
-export default function Projects() {
+export default function Projects({handleClickOpen, modalOpen}) {
     return (
         <Grid
             item
@@ -20,11 +16,13 @@ export default function Projects() {
             <Typography variant='h2'>
                 Projects
             </Typography>
-            <Grid item container direction="row" wrap="nowrap" columnGap={2} overflow='scroll'>
-                {products.map((p) => (
+            <Grid item container direction="row" gap={6} justifyContent='center'>
+                {websites.map((w) => (
                     <Card
-                        key={p.title}
-                        {...p}
+                        key={w.title}
+                        handleClickOpen={handleClickOpen}
+                        modalOpen={modalOpen}
+                        {...w}
                     />
                 )
                 )}

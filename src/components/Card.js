@@ -1,186 +1,185 @@
 import styled from "@emotion/styled";
-import { Button, Grid, Typography } from "@mui/material";
-import { Stack } from "@mui/system";
+import { Button, Grid, Paper, Typography, useMediaQuery } from "@mui/material";
 import { blue, grey } from "material-ui-colors";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const CardButton = styled(Button)(({ theme }) => ({
-    color: theme.palette.getContrastText(grey[100]),
-    backgroundColor: grey[100],
-    color: grey[900],
+    backgroundColor: 'rgba(0, 0, 0, 0.87)',
+    color: grey[100],
     '&:hover': {
-      backgroundColor: blue[600],
-      color: grey[100]
+        backgroundColor: blue[600],
+        color: grey[100]
     },
-  }));
+}));
 
-export default function Card({
+export default function SoftwareCard({
     src,
-    wide,
-    company,
-    logo,
     title,
     body,
-    bullets,
-    productUrl
+    view,
+    details,
+    github,
+    handleClickOpen,
+    chips,
+    modalOpen
 }) {
+
+    const minWidth = useMediaQuery('(min-width: 900px)')
+    const maxWidth = useMediaQuery('(max-width: 900px)')
 
     const [open, setOpen] = useState(false);
 
-    // const handleEnter = () => {
-    //     setOpen(true);
-    // };
-
-    // const handleLeave = () => {
-    //     setOpen(false);
-    // };
-
-    const handleClick = () => {
-        setOpen(!open);
+    const handleHoverEnter = (e) => {
+        e.stopPropagation()
+        if (minWidth) {
+            setOpen(true);
+        }
     };
 
-    // const handleProductClick = (evt) => {
-    //     evt.stopPropagation()
-    //     evt.preventDefault()
+    const handleHoverLeave = (e) => {
+        e.stopPropagation()
+        if (minWidth) {
+            setOpen(false);
+        }
+    };
 
-    // }
+    const handleClick = (e) => {
+        e.stopPropagation()
+        if (maxWidth) {
+            setOpen(!open);
+        }
+    };
+
+    const handleDetailsClick = (evt) => {
+        setOpen(!open)
+        evt.preventDefault();
+        evt.stopPropagation()
+        handleClickOpen(details);
+    };
+
+    useEffect(()=> {
+        setOpen(false)
+    }, [modalOpen])
+
 
     return (
-        <Grid
-            container
-            item
-            direction="column"
-            height="400px"
-            minWidth={{
-                xs: "85%",
-                sm: "56%",
-                md: wide ? "35%" : "35%",
-                lg: wide ? "28%" : "28%",
-            }}
-            borderRadius={2}
-            position="relative"
-            //   onMouseEnter={handleEnter}
-            //   onMouseLeave={handleLeave}
-            //   onClick={handleClick}
-            overflow="hidden"
-            bgcolor="white"
-            justifyContent="flex-end"
-            sx={{
-                transition: 'all .3s ease-in-out',
-                "&:hover .bullets": { opacity: { md: 1 }, maxHeight: { md: "300px" }, mb: {md: '10px'} },
-                "&:hover .overlay": { opacity: { md: 1 } }
-            }}
-        >
-            <Grid
-                item
-                position="absolute"
-                top={0}
-                bottom={0}
-                left={0}
-                right={0}
-                sx={{
-                    backgroundImage:
-                        "linear-gradient(0deg, rgba(0, 0, 0,.75), rgba(0, 0, 0,.15))",
-                }}
-            />
-            <Grid
-                item
-                position="absolute"
-                className="overlay"
-                top={0}
-                bottom={0}
-                left={0}
-                right={0}
-                zIndex={2}
-                bgcolor="rgba(0, 0, 0, .85)"
-                sx={{ opacity: open ? 1 : 0, transition: "all .3s ease-in-out" }}
-            />
-
+        <Paper elevation={3} sx={{ height: { xs: "350px", md: "450px" }, width: { xs: 1, md: "40vw" }, borderRadius: 2, overflow: 'hidden' }}>
             <Grid
                 container
                 item
                 direction="column"
-                position="absolute"
-                height="300px"
-                width="100%"
-                top={0}
-                rowGap="40px"
-                justifyContent="center"
-                alignItems="center"
+                xs
+                minHeight='100%'
+                onMouseEnter={handleHoverEnter}
+                onMouseLeave={handleHoverLeave}
+                position="relative"
+                overflow="hidden"
+                wrap="nowrap"
+                onClick={handleClick}
+                justifyContent="flex-end"
+                fontFamily='Inter'
+                sx={{
+                    transition: "all .3s ease-in-out",
+                    // "&:hover .drawer": { opacity: { md: 1 }, top: {md: 0} },
+                    // "&:hover .buttons, &:hover .body, &:hover .chips": { opacity: { md: 1 } },
+                    // "&:blur .drawer": { opacity: { md: 0 }, top: {md: 'calc(450px - 26px - 64px)'} }
+                }}
             >
-                {src.map((s) => (
-                    <img
-                        key={s}
-                        src={s}
-                        alt=""
-                        style={{
-                            objectFit: "contain",
-                            width: "80%",
-                            maxHeight: "80%",
-                            zIndex: 1,
-                        }}
-                    />
-                ))}
-            </Grid>
-            <Stack width="100%" p={3} alignSelf="flex-end" rowGap={1}>
-                <Stack color="white" zIndex={2}>
-                    <Typography fontSize="16px" color="rgba(255, 255, 255, .9)">
-                        {company}
-                    </Typography>
-                    {/* <Grid container item>
-                        <img src={logo} height='32px' style={{filter: 'grayscale(1)'}}/>
-                    </Grid> */}
-                    <Typography fontSize="24px">{title}</Typography>
-                    {bullets ? (
-                        <Grid
-                            maxHeight={open ? "300px" : 0}
-                            className="bullets"
-                            marginBottom={open ? "10px" : 0}
-                            sx={{
-                                opacity: open ? 1 : 0,
-                                transition: "all .3s ease-in-out",
-                            }}>
-                            <ul
-                                style={{
-                                    margin: 0,
-                                    paddingInlineStart: "15px",
-                                }}
-                            >
-                                {bullets.map((b) => (
-                                    <li key={b}>
-                                        <Typography fontSize="14px">{b}</Typography>
-                                    </li>
-                                ))}
-                            </ul>
-                        </Grid>
-                    ) : (
-                        body ||
-                        "Hello there! This is the body of the card that I want to create. It should work, but who the fuck really knows, am I right? Jeez this is getting long. Maybe I should just quit now and go to bed or something."
-                    )}
-                </Stack>
                 <Grid
                     container
                     item
-                    direction="row"
-                    columnGap={1}
-                    marginTop="auto"
-                    justifyContent="space-between"
-                    zIndex={2}
-                    wrap="nowrap"
+                    direction="column"
+                    justifyContent="center"
+                    alignItems="center"
+                    height="100%"
+                    width="100%"
+                    position='absolute'
                 >
-                    <CardButton href={productUrl} color="primary" variant="contained">
-                        View
-                    </CardButton>
-                    <Button
-                        onClick={handleClick}
-                        variant="text"
-                        color="inherit"
-                        sx={{ display: { xs: "inline-block", md: "none", color: "white" } }}
-                    >
-                        {open ? "Less Info" : "More Info"}
-                    </Button>
+                    {src.map((s) => (
+                        <img
+                            key={s}
+                            src={s}
+                            alt=""
+                            style={{ objectFit: "cover", height: '100%', width: '100%'}}
+                        />
+                    ))}
                 </Grid>
-            </Stack>
-        </Grid>
+                <Grid
+                    item
+                    container
+                    direction='column'
+                    className="drawer"
+                    position='absolute'
+                    justifyContent="space-between"
+                    textAlign='center'
+                    width='100%'
+                    height= '100%'
+                    zIndex={3}
+                    left={0}
+                    right={0}
+                    top={ open ? 0 : { xs: 'calc(100% - 26px - 32px)', md: "calc(450px - 26px - 64px)" }}
+                    wrap='nowrap'
+                    p={{ xs: 2, sm: 2, md: 4, xl: 5 }}
+                    bgcolor='white'
+                    gap={{ xs: 1, sm: 2 }}
+                    sx={{
+                        transition: "all .3s ease-in-out"
+                    }}
+                >
+                    <Grid container item width='100%' direction='row' justifyContent='center' alignItems='center'>
+                        <Typography className="title" noWrap variant="h4">
+                            {title}
+                        </Typography>
+                    </Grid>
+                    <Grid container item className='chips' direction="row" spacing={1} wrap="nowrap" justifyContent='center' 
+                    >
+                        {chips &&
+                            chips.map((c) => (
+                                <Grid container item direction='column' rowGap={1} alignItems='center' maxWidth='40px'>
+                                    <Grid container item maxWidth='30px' maxHeight='30px'>
+                                        <img src={c} alt='' style={{ objectFit: 'contain', maxHeight: '100%', width: '100%', filter: 'grayscale(1)' }} />
+                                    </Grid>
+                                </Grid>
+                            ))}
+                    </Grid>
+                    <Grid container item className='body' direction="row" wrap="nowrap" justifyContent='center' 
+                    >
+
+                        {body.map((b) => (
+                            <Typography variant='body2' key={b} fontSize="16px" maxWidth={{ xs: '400px' }}
+                            >
+                                {b}
+                            </Typography>
+                        ))}
+                    </Grid>
+                    <Grid container item className='buttons' direction="row" gap={{ xs: 1, sm: 2 }} justifyContent='center' 
+                    >
+                        {view ? (
+                            <CardButton
+                                href={view}
+                                variant="contained"
+                                color='primary'
+                            >
+                                View
+                            </CardButton>
+                        ) : null}
+                        <CardButton
+                            onClick={handleDetailsClick}
+                            variant="contained"
+                        >
+                            Details
+                        </CardButton>
+                        {github ? (
+                            <CardButton
+                                href={github}
+                                variant="contained"
+                            >
+                                Github
+                            </CardButton>
+                        ) : null}
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Paper>
     );
 }

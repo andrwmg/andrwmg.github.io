@@ -1,26 +1,39 @@
 import { Grid, Typography } from '@mui/material'
 import React from 'react'
 import Skill from './Skill'
-import inventor from '../images/inventor.png'
-import creo from '../images/creo.png'
-import solidworks from '../images/solidworks.png'
+import react from '../images/react.png'
+import html from '../images/html.png'
+import css from '../images/css.png'
+import javascript from '../images/javascript.png'
+import python from '../images/python.png'
+import mongodb from '../images/mongodb.png'
+import express from '../images/express.png'
+import node from '../images/node.png'
+import bootstrap from '../images/bootstrap.png'
+import mui from '../images/mui.png'
 import illustrator from '../images/illustrator.png'
-import autocad from '../images/autocad.png'
 import photoshop from '../images/photoshop.png'
-import windchill from '../images/windchill.png'
+import c from '../images/c.png'
+import sql from '../images/sql.png'
 
 
 const skills = [
-    { name: 'Inventor', icon: inventor },
-    { name: 'CREO/ProE', icon: creo },
-    { name: 'Solidworks', icon: solidworks },
-    { name: 'Illustrator', icon: illustrator },
-    { name: 'AutoCAD', icon: autocad },
-    { name: 'Photoshop', icon: photoshop },
-    { name: 'Windchill', icon: windchill },
-    // { name: 'Agile', progress: 60, years: '6.5 years' },
-]
+    { name: 'HTML', progress: 80, icon: html },
+    { name: 'CSS', progress: 80, icon: css },
+    { name: 'JavaScript', progress: 70, icon: javascript },
+    { name: 'React', progress: 80, icon: react },
+    { name: 'MUI', progress: 80, icon: mui },
+    { name: 'Bootstrap', progress: 80, icon: bootstrap },
+    { name: 'Node', progress: 60, icon: node },
+    { name: 'MongoDB', progress: 60, icon: mongodb },
+    { name: 'Illustrator', progress: 80, icon: illustrator },
+    { name: 'Photoshop', progress: 60, icon: photoshop },
+    { name: 'Python', progress: 60, icon: python },
+    { name: 'Express', progress: 60, icon: express },
+    { name: 'C', progress: 60, icon: c },
+    { name: 'SQL', progress: 60, icon: sql },
 
+]
 export default function Skills() {
     return (
         <Grid

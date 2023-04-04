@@ -24,7 +24,6 @@ const theme = unstable_createMuiStrictModeTheme({
     h4: {
       fontSize: ["24px", '!important'],
       letterSpacing: '.1em',
-      textTransform: 'uppercase',
     },
     body1: {
       fontSize: ["16px", '!important']

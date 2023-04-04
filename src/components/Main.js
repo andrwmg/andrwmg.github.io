@@ -1,39 +1,26 @@
 import React, { useEffect, useState } from "react";
-import cover from "../images/canyon-min.jpg";
 import Skills from "./Skills";
-import Experience from "./Experience";
-import Education from "./Education";
-import { Divider, Grid, IconButton, Link, Typography } from "@mui/material";
+import {  Grid } from "@mui/material";
 import Footer from "./Footer";
-// import PortfolioCard from './PortfolioCard';
-// import PortfolioCard2 from './PortfolioCard copy';
-import { blue } from "material-ui-colors";
-// import products from './MechanicalSeeds';
-import websites from "../seeds/MechanicalSeeds";
-// import PortfolioCard3 from './PortfolioCard copy 2';
-// import CardContainer from './CardContainer';
-// import InfoDialog from "./InfoDialog";
-import SoftwareCard from "./SoftwareCard";
-import { GitHub, LinkedIn, Mail, MailOutline, Phone, PhoneOutlined } from "@mui/icons-material";
-import { Stack } from "@mui/system";
 import Cover from "./Cover";
 import About from "./About";
 import Projects from "./Projects";
+import Backdrop from "./Backdrop";
 
 export default function Main() {
-    const [open, setOpen] = useState(false);
+    const [modalOpen, setModalOpen] = useState(false);
     const [details, setDetails] = useState(null);
     const [fade, setFade] = useState(false);
 
     const handleClickOpen = (details) => {
         setDetails(details);
-        setOpen(true);
+        setModalOpen(true);
     };
 
     const handleClose = (evt) => {
         evt.preventDefault();
         setDetails(null);
-        setOpen(false);
+        setModalOpen(false);
     };
 
     useEffect(() => {
@@ -41,38 +28,17 @@ export default function Main() {
     }, [])
 
     return (
-        <Grid container direction="column" rowGap={8} sx={{ opacity: fade ? 1 : 0, transition: '1s' }}>
+        <Grid container direction="column" position='relative' rowGap={8} sx={{ opacity: fade ? 1 : 0, transition: '1s' }}>
+
+            <Backdrop open={modalOpen} handleClose={handleClose} details={details} />
+
             <Cover />
             <About />
 
-            <Projects />
+            <Projects handleClickOpen={handleClickOpen} modalOpen={modalOpen} />
 
-            <Grid
-                container
-                item
-                direction="row"
-                justifyContent={{
-                    xs: "center"
-                }}
-                rowGap={4}
-                bgcolor="white"
-                width='100%'
-                maxWidth="100vw"
-            >
-                <Grid
-                    container
-                    item
-                    direction="column"
-                    xs={12}
-                    md={8}
-                    rowGap={4}
-                    px={{ xs: 2, sm: 2, md: 4, xl: 5 }}
-                >
-
-                    <Skills />
-                </Grid>
-            </Grid>
+            <Skills />
             <Footer />
-        </Grid>
+        </Grid >
     );
 }

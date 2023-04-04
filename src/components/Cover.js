@@ -1,14 +1,14 @@
-import { LinkedIn, Mail, Phone } from "@mui/icons-material"
+import { GitHub, LinkedIn, Mail, Phone } from "@mui/icons-material"
 import { Grid, IconButton, Typography } from "@mui/material"
 import { Stack } from "@mui/system"
 import React from "react"
-import cover from "../images/canyon.jpg"
+import cover from "../images/canyon-min.jpg"
 
 const items = [
     { text: 'andrwmg@gmail.com', icon: <Mail />, link: 'mailto: andrwmg@gmail.com' },
     { text: '610-888-4468', icon: <Phone />, link: 'tel:6108884468' },
-    { text: 'linkedin.com/in/andrwmg', icon: <LinkedIn />, link: 'https://www.linkedin.com/in/andrwmg' }
-]
+    { text: 'linkedin.com/in/andrwmg', icon: <LinkedIn />, link: 'https://www.linkedin.com/in/andrwmg' },
+    { text: 'github.com/andrwmg', icon: <GitHub />, link: 'https://github.com/andrwmg' }]
 
 export default function Cover() {
 
@@ -73,7 +73,7 @@ export default function Cover() {
                 <Typography variant='h1' noWrap color='white'>
                     Andrew Gay
                 </Typography>
-                <Typography variant='h3' mb={1} color='white'>Mechanical Engineer</Typography>
+                <Typography variant='h3' mb={1} color='white'>Software Engineer</Typography>
                 <Stack direction='row' gap={1}>
                     {items.map(i => (
                         <IconButton href={i.link} sx={{ color: 'white' }}>
