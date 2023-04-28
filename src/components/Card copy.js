@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { Button, Grid, Paper, Typography, useMediaQuery } from "@mui/material";
+import { Box } from "@mui/system";
 import { blue, grey } from "material-ui-colors";
 import React, { useEffect, useState } from "react";
 
@@ -13,7 +14,8 @@ const CardButton = styled(Button)(({ theme }) => ({
 }));
 
 export default function SoftwareCard({
-    src,
+    light,
+    dark,
     title,
     body,
     view,
@@ -64,53 +66,46 @@ export default function SoftwareCard({
 
 
     return (
-        <Paper elevation={3} sx={{ borderStyle: 'none', height: { xs: "350px", md: "450px" }, width: { xs: 1, md: "40vw" }, borderRadius: 2, overflow: 'hidden', 
-        // boxShadow: theme === 'light' ? '0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)' : '0px 3px 3px -2px rgb(128 128 128 / 20%), 0px 3px 4px 0px rgb(128 128 128 / 14%), 0px 1px 8px 0px rgb(128 128 128 / 12%)' 
-    }}
+        <Paper elevation={3} sx={{ borderStyle: 'none', bgcolor: 'white', borderRadius: 2, overflow: 'hidden', position: 'relative'}}
         >
             <Grid
                 container
                 item
                 direction="column"
                 xs
-                minHeight='100%'
+                width={{xs: '100vw', md: "40vw"}}
+                flexGrow={1}
+                maxHeight={{xs: 'calc(62px + 100vw * 9 / 16)', md: 'calc(88px + 50vw * 9 / 16)'}}
                 onMouseEnter={handleHoverEnter}
                 onMouseLeave={handleHoverLeave}
-                position="relative"
                 overflow="hidden"
                 wrap="nowrap"
                 onClick={handleClick}
-                justifyContent="flex-end"
+                justifyContent="space-between"
                 fontFamily='Inter'
                 sx={{
                     borderStyle:'none',
                     transition: "all .3s ease-in-out",
-                    // "&:hover .drawer": { opacity: { md: 1 }, top: {md: 0} },
-                    // "&:hover .buttons, &:hover .body, &:hover .chips": { opacity: { md: 1 } },
-                    // "&:blur .drawer": { opacity: { md: 0 }, top: {md: 'calc(450px - 26px - 64px)'} }
                 }}
             >
                 <Grid
                     container
                     item
                     direction="column"
-                    justifyContent="center"
+                    justifyContent="start"
                     alignItems="center"
-                    height="100%"
-                    width="100%"
-                    position='absolute'
-                    bgcolor='black'
+                    maxHeight={{xs: 'calc(100vw * 9 / 16)', md: 'calc(50vw * 9 / 16)'}}
+                    overflow='hidden'
                     sx={{borderStyle: 'none', border: 'none'}}
                 >
-                    {src.map((s) => (
                         <img
-                            key={s}
-                            src={s}
+                            src={dark}
                             alt=""
-                            style={{ borderStyle: 'none', objectFit: "cover", height: '100%', width: '100%', opacity: open ? 0 : 1, transition: '.3s ease-in-out'}}
+                            style={{ borderStyle: 'none', width: '100%', mt: 'auto', transition: '.3s ease-in-out', objectFit: 'cover'}}
                         />
-                    ))}
                 </Grid>
+                <Box sx={{flexGrow: 1}} />
+                <Box sx={{height: {xs: '64px', lg: '88px'}, bgcolor: theme === 'dark' ? 'black' : 'white', zIndex: 1}} />
                 <Grid
                     item
                     container
@@ -121,24 +116,25 @@ export default function SoftwareCard({
                     textAlign='center'
                     width='100%'
                     height= '100%'
-                    zIndex={3}
+                    zIndex={2}
                     left={0}
                     right={0}
-                    top={ open ? 0 : { xs: 'calc(100% - 26px - 32px)', md: "calc(450px - 26px - 64px)" }}
+                    top={ open ? 0 : { xs: 'calc(100% - 62px)', lg: "calc(100% - 88px)" }}
                     wrap='nowrap'
-                    p={{ xs: 2, sm: 2, md: 4, xl: 5 }}
-                    bgcolor={theme === 'dark' ? '#191919' : 'white'}
+                    p={{ xs: 2, sm: 2, md: 2, lg: 4, xl: 5 }}
+                    bgcolor='background.default'
                     gap={{ xs: 1, sm: 2 }}
                     sx={{
                         transition: "top .3s ease-in-out"
                     }}
                 >
+                    <Grid container item direction='column' gap={{xs: 2, sm: 4, md: 2, lg: 4, xl: 5}}>
                     <Grid container item width='100%' direction='row' justifyContent='center' alignItems='center'>
                         <Typography className="title" noWrap variant="h4">
                             {title}
                         </Typography>
                     </Grid>
-                    <Grid container item className='chips' direction="row" spacing={1} wrap="nowrap" justifyContent='center' 
+                    <Grid container item className='chips' direction="row" spacing={1} wrap="nowrap" justifyContent='center'
                     >
                         {chips &&
                             chips.map((c) => (
@@ -149,15 +145,15 @@ export default function SoftwareCard({
                                 </Grid>
                             ))}
                     </Grid>
-                    <Grid container item className='body' direction="row" wrap="nowrap" justifyContent='center' 
-                    >
+                    <Grid container item className='body' direction="row" wrap="nowrap" justifyContent='center' maxWidth={{xs: '80%'}}>
 
                         {body.map((b) => (
-                            <Typography variant='body2' key={b} fontSize="16px" maxWidth={{ xs: '400px' }}
+                            <Typography variant='body2' key={b} fontSize={{xs: '14px', sm: '20px', md: "16px", lg: '18px'}} maxWidth='90%'
                             >
                                 {b}
                             </Typography>
                         ))}
+                    </Grid>
                     </Grid>
                     <Grid container item className='buttons' direction="row" gap={{ xs: 1, sm: 2 }} justifyContent='center' 
                     >

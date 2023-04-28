@@ -15,7 +15,7 @@ import illustrator from '../images/illustrator.png'
 import photoshop from '../images/photoshop.png'
 import c from '../images/c.png'
 import sql from '../images/sql.png'
-
+import jquery from '../images/jquery.png'
 
 const skills = [
     { name: 'HTML', progress: 80, icon: html },
@@ -24,6 +24,7 @@ const skills = [
     { name: 'React', progress: 80, icon: react },
     { name: 'MUI', progress: 80, icon: mui },
     { name: 'Bootstrap', progress: 80, icon: bootstrap },
+    { name: 'jQuery', progress: 80, icon: jquery },
     { name: 'Node', progress: 60, icon: node },
     { name: 'MongoDB', progress: 60, icon: mongodb },
     { name: 'Illustrator', progress: 80, icon: illustrator },
@@ -37,39 +38,38 @@ const skills = [
 export default function Skills() {
     return (
         <Grid
+            container
+            item
+            direction="row"
+            justifyContent={{
+                xs: "center"
+            }}
+            rowGap={4}
+            width='100%'
+            maxWidth="100vw"
+        >
+            <Grid
                 container
                 item
-                direction="row"
-                justifyContent={{
-                    xs: "center"
-                }}
+                direction="column"
+                xs={12}
+                md={8}
                 rowGap={4}
-                bgcolor="white"
-                width='100%'
-                maxWidth="100vw"
+                px={{ xs: 2, sm: 2, md: 4, xl: 5 }}
             >
-                <Grid
-                    container
-                    item
-                    direction="column"
-                    xs={12}
-                    md={8}
-                    rowGap={4}
-                    px={{ xs: 2, sm: 2, md: 4, xl: 5 }}
-                >
 
-            <Grid container item direction='row' justifyContent='center'>
-                <Typography variant='h2'>
-                    Skills
-                </Typography>
-            </Grid>
-            <Grid container item columnGap={{ xs: 2, sm: 4 }} rowGap={4} direction='row' justifyContent='center'>
-                {skills.map((skill, index) => (
-                    <Skill key={skill.name} index={index} skill={skill.name} icon={skill.icon} size={{ xs: '40px', sm: '40px' }} />
-                ))}
-            </Grid>
-
+                <Grid container item direction='row' justifyContent='center'>
+                    <Typography variant='h2'>
+                        Skills
+                    </Typography>
                 </Grid>
+                <Grid container item columnGap={{ xs: 2, sm: 4 }} rowGap={4} direction='row' justifyContent='center'>
+                    {skills.map((skill, index) => (
+                        <Skill key={skill.name} index={index} skill={skill.name} icon={skill.icon} size={{ xs: '40px', sm: '40px' }} />
+                    ))}
+                </Grid>
+
             </Grid>
+        </Grid>
     )
 }

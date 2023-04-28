@@ -10,7 +10,7 @@ const items = [
     { text: 'linkedin.com/in/andrwmg', icon: <LinkedIn />, link: 'https://www.linkedin.com/in/andrwmg' },
     { text: 'github.com/andrwmg', icon: <GitHub />, link: 'https://github.com/andrwmg' }]
 
-export default function Cover() {
+export default function Cover({theme}) {
 
     return (
         <Grid
@@ -21,7 +21,8 @@ export default function Cover() {
             position='relative'
             alignItems='flex-end'
             justifyContent='center'
-            pb={{xs: 0, sm: 4}}
+            pb={theme === 'dark' ? 0 : 4}
+            sx={{transition: '1s ease-in-out'}}
         >
             <Grid
                 container
@@ -32,7 +33,7 @@ export default function Cover() {
                 top={0}
                 bottom={0}
                 zIndex={1}
-                sx={{backgroundImage: "linear-gradient(180deg, rgba(0, 0, 0,0) 50%, rgba(0, 0, 0,.9))"}}
+                sx={{backgroundImage: theme === 'dark' ? "linear-gradient(180deg, rgba(0, 0, 0, 1.0) 5% ,rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1.0) 80%)" : "linear-gradient(180deg, rgba(0, 0, 0,0) 50%, rgba(0, 0, 0,.9))"}}
             />
             <Grid
                 container
@@ -61,13 +62,14 @@ export default function Cover() {
                 direction="column"
                 textAlign='center'
                 alignItems="center"
+                justifyContent='flex-end'
+                minHeight='100%'
                 borderRadius={{xs: 0, sm: 2}}
                 xs={12}
                 sm={7}
                 md={5}
                 lg={3}
-                py={2}
-                rowGap={1}
+                mb={4}
                 zIndex={1}
             >
                 <Typography variant='h1' noWrap color='white'>

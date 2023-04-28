@@ -7,7 +7,7 @@ import About from "./About";
 import Projects from "./Projects";
 import Backdrop from "./Backdrop";
 
-export default function Main() {
+export default function Main({theme}) {
     const [modalOpen, setModalOpen] = useState(false);
     const [details, setDetails] = useState(null);
     const [fade, setFade] = useState(false);
@@ -28,14 +28,14 @@ export default function Main() {
     }, [])
 
     return (
-        <Grid container direction="column" position='relative' rowGap={8} sx={{ opacity: fade ? 1 : 0, transition: '1s' }}>
+        <Grid container direction="column" position='relative' rowGap={8} sx={{ opacity: fade && theme ? 1 : 0, transition: 'opacity 1s ease-in-out' }}>
 
             <Backdrop open={modalOpen} handleClose={handleClose} details={details} />
 
-            <Cover />
+            <Cover theme={theme} />
             <About />
 
-            <Projects handleClickOpen={handleClickOpen} modalOpen={modalOpen} />
+            <Projects handleClickOpen={handleClickOpen} modalOpen={modalOpen} theme={theme} />
 
             <Skills />
             <Footer />

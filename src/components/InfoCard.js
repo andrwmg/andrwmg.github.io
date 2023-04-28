@@ -14,7 +14,7 @@ export default function InfoCard({ heading, image, body, background, color, hand
                     {heading}
                 </Typography>
                 {body.map(t => (
-                    <Typography key={t} fontSize='16px'>
+                    <Typography key={t} variant='info' fontSize='16px'>
                         {t}
                     </Typography>
                 ))}
