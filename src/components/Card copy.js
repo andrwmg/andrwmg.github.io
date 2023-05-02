@@ -50,13 +50,15 @@ export default function SoftwareCard({
         e.stopPropagation()
         if (maxWidth) {
             setOpen(!open);
+        } else {
+            setOpen(false)
         }
     };
 
     const handleDetailsClick = (evt) => {
-        setOpen(!open)
         evt.preventDefault();
         evt.stopPropagation()
+        setOpen(!open)
         handleClickOpen(details);
     };
 

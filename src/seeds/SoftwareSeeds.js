@@ -47,7 +47,7 @@ const websites = [
         light: [spotifyles],
         dark: [spotifyles],
         title: 'Spotifyles',
-        body: ['Spotifyles utlizes the Spotify API to allow users to view the songs in their Spotify playlists and back them up to CSV files. The dashboard showcases user playlists similar to the Spotify app.',
+        body: ['Spotifyles utilizes the Spotify API to allow users to view the songs in their Spotify playlists and back them up to CSV files. The dashboard showcases user playlists similar to the Spotify app.',
             //     'Tesla Mart is a CRUD web app where current and future Tesla owners can buy and sell their vehicles.', 
             // 'The frontend was designed using React and MUI, while the baleckend was created using NodeJS, Express, and MongoDB.'
         ],
@@ -71,7 +71,7 @@ const websites = [
         light: [kallaborative],
         dark: [kallaborative],
         title: 'Kallaborative Design',
-        body: ['Kallaborative Design is a web dev freelancing company co-founder by myself and a UI/UX Product Designer. We are using this company as an oppotunity to help the community and learn even more about our disciplines.'],
+        body: ['Kallaborative Design is a web dev freelancing company co-founded by myself and a UI/UX Product Designer. We are using this company as an opportunity to help the community and learn even more about our disciplines.'],
         bullets: [
             'HTML',
             'Vanilla JavaScript',
