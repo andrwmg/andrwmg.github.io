@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.325f2bd4.css",
-    "main.js": "/static/js/main.b9c5120b.js",
+    "main.js": "/static/js/main.a7f9758c.js",
     "static/js/787.aaab5553.chunk.js": "/static/js/787.aaab5553.chunk.js",
     "static/media/teslamart.png": "/static/media/teslamart.7bf85c9823f85fa6b17e.png",
     "static/media/teslamartDark.png": "/static/media/teslamartDark.8a6e888da737763ccc05.png",
@@ -34,11 +34,11 @@
     "static/media/python.png": "/static/media/python.9c47735ea0c4a2d20349.png",
     "index.html": "/index.html",
     "main.325f2bd4.css.map": "/static/css/main.325f2bd4.css.map",
-    "main.b9c5120b.js.map": "/static/js/main.b9c5120b.js.map",
+    "main.a7f9758c.js.map": "/static/js/main.a7f9758c.js.map",
     "787.aaab5553.chunk.js.map": "/static/js/787.aaab5553.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.325f2bd4.css",
-    "static/js/main.b9c5120b.js"
+    "static/js/main.a7f9758c.js"
   ]
 }
