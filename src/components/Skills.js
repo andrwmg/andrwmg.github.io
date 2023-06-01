@@ -1,5 +1,5 @@
 import { Grid, Typography } from '@mui/material'
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Skill from './Skill'
 import react from '../images/react.png'
 import html from '../images/html.png'
@@ -16,6 +16,8 @@ import photoshop from '../images/photoshop.png'
 import c from '../images/c.png'
 import sql from '../images/sql.png'
 import jquery from '../images/jquery.png'
+import git from '../images/git.png'
+import {motion, useAnimation} from 'framer-motion'
 
 const skills = [
     { name: 'HTML', progress: 80, icon: html },
@@ -23,6 +25,7 @@ const skills = [
     { name: 'JavaScript', progress: 70, icon: javascript },
     { name: 'React', progress: 80, icon: react },
     { name: 'MUI', progress: 80, icon: mui },
+    { name: 'Git', icon: git},
     { name: 'Bootstrap', progress: 80, icon: bootstrap },
     { name: 'jQuery', progress: 80, icon: jquery },
     { name: 'Node', progress: 60, icon: node },
@@ -36,6 +39,44 @@ const skills = [
 
 ]
 export default function Skills() {
+
+    const containerRef = useRef()
+    const controls = useAnimation()
+
+    const [animated, setAnimated] = useState(false)
+
+    const animationVariants = {
+        hidden: { opacity: 0, scale: .5 },
+        visible: { opacity: 1, scale: 1 },
+      };
+    
+      const handleIntersection = (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.1) {
+          controls.start('visible');
+          setAnimated(true)
+        } else {
+            setAnimated(false)
+          controls.start('hidden');
+        }
+      };
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(handleIntersection, {
+          threshold: 0.1, // Adjust the threshold value as needed
+        });
+    
+        if (containerRef.current) {
+          observer.observe(containerRef.current);
+        }
+    
+        return () => {
+          if (containerRef.current) {
+            observer.unobserve(containerRef.current);
+          }
+        };
+      }, []);
+
     return (
         <Grid
             container
@@ -63,9 +104,16 @@ export default function Skills() {
                         Skills
                     </Typography>
                 </Grid>
-                <Grid container item columnGap={{ xs: 2, sm: 4 }} rowGap={4} direction='row' justifyContent='center'>
+                <Grid container item columnGap={{ xs: 2, sm: 4 }} rowGap={4} direction='row' justifyContent='center' ref={containerRef}>
                     {skills.map((skill, index) => (
-                        <Skill key={skill.name} index={index} skill={skill.name} icon={skill.icon} size={{ xs: '40px', sm: '40px' }} />
+                            <Grid container item rowGap={1} alignItems='center' maxWidth='60px'>
+
+                        <motion.div initial='hidden' animate={controls} transition={{duration: animated ? .1 : .2, delay: animated  ? 0 : .1 * index}} variants={animationVariants} style={{maxWidth: '60px'}}>
+                            <Grid container item justifyContent='center' alignItems='center'>
+                        <Skill key={skill.name} skill={skill.name} icon={skill.icon} size='40px' />
+                        </Grid>
+                        </motion.div>
+                        </Grid>
                     ))}
                 </Grid>
 

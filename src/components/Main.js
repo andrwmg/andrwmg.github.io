@@ -6,6 +6,7 @@ import Cover from "./Cover";
 import About from "./About";
 import Projects from "./Projects";
 import Backdrop from "./Backdrop";
+import { useAnimation } from "framer-motion";
 
 export default function Main({theme}) {
     const [modalOpen, setModalOpen] = useState(false);

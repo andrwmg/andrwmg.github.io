@@ -10,6 +10,9 @@ import { dark } from '@mui/material/styles/createPalette';
 
 const light = createTheme({
   typography: {
+    button: {
+      textTransform: 'initial'
+    },
     fontFamily: [
       'Inter',
       'sans-serif'
@@ -71,7 +74,7 @@ function App() {
 
   useEffect(() => {
     if (getHours(new Date()) > 6 && getHours(new Date()) < 19) {
-      setTheme('light')
+      setTheme('dark')
     } else {
       setTheme('dark')
     }

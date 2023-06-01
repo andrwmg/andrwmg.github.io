@@ -66,7 +66,7 @@ function DrawerAppBar(props) {
             {/* <FormControlLabel control={<Switch checked={props.theme === 'dark'} onChange={props.toggleTheme} title='dark' />} label={props.theme === 'dark' ? 'Dark' : 'Light'} sx={{ display: 'block', color: props.theme === 'dark' ? 'white' : 'black' }} /> */}
 
             <Button
-              href="https://drive.google.com/uc?export=download&id=1MX4ZWU4RNRpj3mL2C9uz_dYX0p7O8GvX"
+              href="https://drive.google.com/uc?export=view&id=1MX4ZWU4RNRpj3mL2C9uz_dYX0p7O8GvX"
               sx={{
                 color: props.theme === 'dark' ? "white" : "rgba(0, 0, 0, 0.87)", ml: "auto", transition: 'color 0s', '&:.MuiButtonBase-root': { bgcolor: props.theme === 'dark' && 'black', transition: 'background-color 0s' },
               }}>

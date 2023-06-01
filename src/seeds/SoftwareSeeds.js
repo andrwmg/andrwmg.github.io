@@ -15,6 +15,8 @@ import teslamart from '../images/teslamart.png'
 import teslamartDark from '../images/teslamartDark.png'
 import spotifyles from '../images/spotifyles.png'
 import kallaborative from '../images/kallaborative.png'
+import spotify from '../images/spotify.png'
+import framer from '../images/framer.png'
 
 
 const websites = [
@@ -44,6 +46,30 @@ const websites = [
     },
     {
         wide: false,
+        light: [careerpivot],
+        dark: [careerpivot],
+        title: 'CareerPivot',
+        body: ['CareerPivot is an ongoing collaboration between myself, a UI/UX Designer, and a Product Manager. We are providing an online community dedicated to resources for people looking to change their careers.'
+        // was built using React for the frontend framework, while Node and MongoDB were used for the backend. All RESTful routes are completed using Express. This was an individual effort that represents the culmination of two bootcamps and individual research.',
+            //     'Tesla Mart is a CRUD web app where current and future Tesla owners can buy and sell their vehicles.', 
+            // 'The frontend was designed using React and MUI, while the backend was created using NodeJS, Express, and MongoDB.'
+        ],
+        bullets: [
+            'Features that I have not yet added include:',
+            'Reset password email',
+            'Multiple selections on a filter',
+            'Listing status',
+            'Comment replies',
+            "‘My Listings’ page",
+            "‘Favorites’ page'",
+        ],
+        view: 'https://www.careerpivot.io',
+        chips: [react, mui, node, mongodb, express, framer],
+        // details: teslaMartV2,
+        github: 'https://github.com/andrwmg/careerpivot',
+    },
+    {
+        wide: false,
         light: [spotifyles],
         dark: [spotifyles],
         title: 'Spotifyles',
@@ -61,7 +87,7 @@ const websites = [
             "‘Favorites’ page'",
         ],
         view: 'https://spotifyles.herokuapp.com',
-        chips: [react, mui],
+        chips: [react, mui, spotify],
         details: null,
         github: 'https://github.com/andrwmg/spotifyles',
     },
