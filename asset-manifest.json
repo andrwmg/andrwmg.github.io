@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.325f2bd4.css",
-    "main.js": "/static/js/main.a7f9758c.js",
+    "main.js": "/static/js/main.d611ea2a.js",
     "static/js/787.aaab5553.chunk.js": "/static/js/787.aaab5553.chunk.js",
     "static/media/teslamart.png": "/static/media/teslamart.7bf85c9823f85fa6b17e.png",
     "static/media/teslamartDark.png": "/static/media/teslamartDark.8a6e888da737763ccc05.png",
@@ -11,10 +11,15 @@
     "static/media/Edit.png": "/static/media/Edit.a2124f7aa75b99f716dc.png",
     "static/media/Cover-min.jpg": "/static/media/Cover-min.fe23fec656acba5cfc53.jpg",
     "static/media/canyon-min.jpg": "/static/media/canyon-min.bf42b1fc23d3ea13d3dd.jpg",
+    "static/media/post.png": "/static/media/post.12c0ccef3ea3ab6c423e.png",
     "static/media/Messages.png": "/static/media/Messages.57b88e3e91c8abecd3e0.png",
+    "static/media/dashboard.png": "/static/media/dashboard.bc6eb62c091e336c8fee.png",
+    "static/media/profile.png": "/static/media/profile.7ad82739f13da2a024fa.png",
     "static/media/Profile.png": "/static/media/Profile.51feb2ecc71b89f3c4a5.png",
     "static/media/careerpivot.png": "/static/media/careerpivot.0eeb2bb77967b15defca.png",
     "static/media/New.png": "/static/media/New.5d03063c5c139411111e.png",
+    "static/media/group.png": "/static/media/group.9d5d1c8fdf373364fa36.png",
+    "static/media/newpost.png": "/static/media/newpost.6512d71b890852cad473.png",
     "static/media/kallaborative.png": "/static/media/kallaborative.c2c7b759019f846998cd.png",
     "static/media/rpgeez.png": "/static/media/rpgeez.34d587ab3ffa2a1d2e61.png",
     "static/media/spotify.png": "/static/media/spotify.ce19e6536793a2e9d99f.png",
@@ -34,11 +39,11 @@
     "static/media/python.png": "/static/media/python.9c47735ea0c4a2d20349.png",
     "index.html": "/index.html",
     "main.325f2bd4.css.map": "/static/css/main.325f2bd4.css.map",
-    "main.a7f9758c.js.map": "/static/js/main.a7f9758c.js.map",
+    "main.d611ea2a.js.map": "/static/js/main.d611ea2a.js.map",
     "787.aaab5553.chunk.js.map": "/static/js/787.aaab5553.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.325f2bd4.css",
-    "static/js/main.a7f9758c.js"
+    "static/js/main.d611ea2a.js"
   ]
 }
